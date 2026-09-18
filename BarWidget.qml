@@ -32,24 +32,31 @@ BarWidget {
 
     Process { id: actionProcess; running: false }
 
-    content: RowLayout {
-        spacing: 6
-        MouseArea {
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            actionProcess.command = ["playerctl", "play-pause"];
+            actionProcess.running = true;
+        }
+
+        RowLayout {
             anchors.fill: parent
-            onClicked: root.controller.toggle()
-        }
+            anchors.leftMargin: 8
+            anchors.rightMargin: 8
+            spacing: 6
 
-        Text {
-            text: root.isPlaying ? "🟠" : "⏸️"
-            font.pixelSize: 13
-        }
+            Text {
+                text: root.isPlaying ? "🟠" : "⏸️"
+                font.pixelSize: 13
+            }
 
-        Text {
-            text: root.trackInfo
-            color: root.barForeground
-            font.pixelSize: Style.font.body
-            elide: Text.ElideRight
-            Layout.maximumWidth: 200
+            Text {
+                text: root.trackInfo
+                color: root.barForeground
+                font.pixelSize: Style.font.body
+                elide: Text.ElideRight
+                Layout.maximumWidth: 200
+            }
         }
     }
 }
