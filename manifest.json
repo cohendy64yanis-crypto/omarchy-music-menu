@@ -7,6 +7,6 @@
     "bar-widget"
   ],
   "entryPoints": {
-    "bar-widget": "BarWidget.qml"
+    "barWidget": "BarWidget.qml"
   }
 }
