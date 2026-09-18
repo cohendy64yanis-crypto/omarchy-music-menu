@@ -43,11 +43,25 @@ BarWidget {
             anchors.fill: parent
             anchors.leftMargin: 8
             anchors.rightMargin: 8
-            spacing: 6
+            spacing: 8
 
-            Text {
-                text: root.isPlaying ? "🟠" : "⏸️"
-                font.pixelSize: 13
+            // Icône élégante en forme de cercle avec contour (style de ton image)
+            Rectangle {
+                width: 20
+                height: 20
+                radius: 10
+                color: "transparent"
+                border.color: root.barForeground
+                border.width: 1.5
+                Layout.alignment: Qt.AlignVCenter
+
+                Text {
+                    anchors.centerIn: parent
+                    text: root.isPlaying ? "❚❚" : "▶"
+                    color: root.barForeground
+                    font.pixelSize: 9
+                    leftPadding: root.isPlaying ? 0 : 1
+                }
             }
 
             Text {
@@ -56,6 +70,7 @@ BarWidget {
                 font.pixelSize: Style.font.body
                 elide: Text.ElideRight
                 Layout.maximumWidth: 200
+                Layout.alignment: Qt.AlignVCenter
             }
         }
     }
