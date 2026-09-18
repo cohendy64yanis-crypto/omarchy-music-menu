@@ -9,7 +9,7 @@ BarWidget {
     id: root
     moduleName: "io.github.cohendy64yanis-crypto.music-widget"
 
-    property string trackInfo: "SoundCloud : Pause"
+    property string trackInfo: "SoundCloud : En pause"
     property bool isPlaying: false
 
     Process {
@@ -45,31 +45,31 @@ BarWidget {
             anchors.rightMargin: 8
             spacing: 8
 
-            // Icône élégante en forme de cercle avec contour (style de ton image)
+            // Icône circulaire propre avec play/pause
             Rectangle {
-                width: 20
-                height: 20
-                radius: 10
+                width: 18
+                height: 18
+                radius: 9
                 color: "transparent"
-                border.color: root.barForeground
+                border.color: "white"
                 border.width: 1.5
                 Layout.alignment: Qt.AlignVCenter
 
                 Text {
                     anchors.centerIn: parent
                     text: root.isPlaying ? "❚❚" : "▶"
-                    color: root.barForeground
-                    font.pixelSize: 9
+                    color: "white"
+                    font.pixelSize: 8
                     leftPadding: root.isPlaying ? 0 : 1
                 }
             }
 
             Text {
                 text: root.trackInfo
-                color: root.barForeground
-                font.pixelSize: Style.font.body
+                color: "white"
+                font.pixelSize: 12
                 elide: Text.ElideRight
-                Layout.maximumWidth: 200
+                Layout.maximumWidth: 180
                 Layout.alignment: Qt.AlignVCenter
             }
         }
