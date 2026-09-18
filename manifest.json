@@ -1,6 +1,21 @@
 {
-    "schemaVersion": 1,
-    "id": "io.github.cohendy64yanis-crypto.music-widget",
-    "name": "Music Widget",
-    "version": "1.0.0"
+  "schemaVersion": 1,
+  "id": "io.github.cohendy64yanis-crypto.music-widget",
+  "name": "Music Widget",
+  "version": "1.0.0",
+  "author": "cohendy64yanis-crypto",
+  "license": "MIT",
+  "description": "Widget de musique SoundCloud pour Omarchy",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Music Widget",
+    "category": "Media",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
 }
