@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.cohendy64yanis-crypto.french-go-menu",
+  "name": "Menu Go Français",
+  "version": "1.0.0",
+  "author": "cohendy64yanis-crypto",
+  "license": "MIT",
+  "description": "Menu de lancement central entièrement en français",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Menu Go (FR)",
+    "category": "Utilities",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}
