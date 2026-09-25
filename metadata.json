@@ -1,0 +1,12 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [{"Name": "Yanis"}],
+        "Category": "Multimedia",
+        "Description": "Lance Spotify et joue les favoris",
+        "Icon": "spotify",
+        "Id": "org.example.spotifyfav",
+        "Name": "Spotify Favoris",
+        "Version": "1.0"
+    }
+}
